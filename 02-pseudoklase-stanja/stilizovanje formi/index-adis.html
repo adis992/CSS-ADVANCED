@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>stilizovanje formi-forms</title>
+        <style>
+            #contact-wrapper {
+                width: 400px;
+                margin: 0 auto;
+            }
+
+
+            /*ovo ispod vrijedi za type text*/
+            input[type="text"] {
+                width: 100%;
+                padding: 10px;  /*da elem. izgledaju malo krupnije na stranici*/
+                border: solid 2px #c9c9c9cc; /*razmak izmedju boxova odnosno elem.*/
+                margin: 10px 0 10px 0; 
+               
+            }
+
+            input [type="text"]:hover {   /*hover focus i disable pseudoklase stanja*/
+                border: solid 2px #969696;
+            }
+            input [type="text"]:focus {
+                border: solid 2px #262626;
+            }
+            input [type="text"]:disabled {
+                background-color: rgba(201, 201, 201, 0.75);
+            }
+
+
+            /*ovo ispod vrijedi za type submit*/
+            input [type="submit"] {
+                padding: 10px;
+                border: solid 2px #7e7a7acc;
+                background-color: rgba(201, 201, 201, 0);
+                display: block;   /*ovo ce button submit ostaviti sam u tom redu a ostatk prebacuje u novi*/
+                margin-bottom: 10px;  /*odvaja text od submita za 10px*/
+            }
+
+            input [type="submit"]:hover {
+                border: solid 2px #969696;
+                cursor: pointer;
+            }
+            input [type="submit"]:focus {
+                border: solid 2px #262626;
+            }
+            input [type="submit"]:active
+            {
+                border: solid 2px #41B9E1
+            }
+            
+            input[type="checkbox"]:checked+label { /*+label je za label element*/
+                color: #41B9E1; /*boja text check boxa*/
+            }
+
+
+        </style>
+    </head>
+    <body>     
+        <div id="contact-wrapper">
+            <form>
+                <input type="text" name="name" id="name" placeholder="NAME" autocomplete="off">
+                <input type="text" name="email" id="email" placeholder="E-MAIL" autocomplete="off">
+                <input disabled type="text" name="subject" id="subject" placeholder="SUBJECT (disabled)"
+                      autocomplete="off">
+                <input type="submit" name="submit" id="submit" value="SEND">
+                <input type="checkbox" name="subscribe" id="subscribe">
+                <label for="subscribe">YES, I WANT TO RECEIVE INFORMATION ABOUT NEW PROJECTS</label>
+            </form>
+        </div> 
+    </body>
+</html>

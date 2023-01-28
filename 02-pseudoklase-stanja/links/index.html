@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        a:link {
+            background-color: rgb(204, 18, 42);
+        } /* boja linka ce biti crvena po defaultu*/
+        a:visited {
+            background-color: rgb(68, 231, 35);
+        } /*ako je user vec koristio taj link kada dodje misom biti ce zelena*/
+        a:hover {
+            background-color: rgb(23, 7, 163);
+        } /**/
+        a:focus {
+            background-color: rgb(8, 5, 5);
+        }  /*kada koristimo TAB na tast i dodjemo na link boja ce biti crna*/
+        
+        a:active {
+            background-color: rgb(165, 212, 54);
+        }  /*kada uzmem misom i drzim na linku boja ce biti zuta*/
+        #some-div {
+            width: 400px;
+            height: 300px;
+            background-color: rgb(189, 20, 223);
+        }  /*boja divba ce biti navedena i velicine*/
+        #some-div:hover {
+            background-color: rgb(17, 6, 165);
+            cursor: pointer;
+        }  /*kada misom predjemo preko div elementa boja ce biti plava*/
+
+    </style>
+</head>
+<body>
+    <a href="https://google.com">idi na link</a>
+    <div id="some-div"></div>
+</body>
+</html>

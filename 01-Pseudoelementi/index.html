@@ -1,10 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Attribute selectors</title>
+        <style>
+            #some-id {
+                width: 400px;
+                height: 300px;
+                background-color: red;
+            }
+
+            /*.some-class {
+                 width: 400px;
+                height: 300px;
+                background-color: red;
+            }*/
+
+
+            /*a[target] {
+                color: indianred;
+            }*/
+
+            /*a[target="_blank"] {
+                color: green;
+            }*/
+
+
+            /*div[class*="wrap"] {
+                height: 200px;
+                background-color: yellow;
+            }    SELEKTOVANJE ATRIPUTA CLASS OZNACAVAMO DA TA KLASA  AKO IMA U IMENU WRAP CE URADITI ONON STO NAPISEM U STILIZACIJI NPR COLOR       */
+
+            /*a[href^="http://www.link-group.eu"] {
+                color: red;
+            }      KAO I GORNJI SLUCAJ*/
+
+            /*a[href$=".pdf"] {
+                font-style: italic;
+            }       PRIJER KADA OZNACAVAMO ATRIBUT HREF ILI LINK  I SVE STO IMA U NAZIVU DA TO I OZNACI*/
+
+            /*a[title~="link"] {
+                color: red;
+            }           title~ PRIJEMER KADA JE SELEKTOR SELEKTOVAO TITLE  I SVE KOJI IMAJU TAKAV NAZIV OBOJIO U TU BOJU             */
+
+            /*[class|="top"] {
+                background: yellow;
+            }            NA OVAJ NACIN SELEKTUJEMO SVE ELEMENTE U VRIJEDNOSTI ODREDNICE TOP, SAMO NECE SELEKTOVATI OVO U PRIMJERU "top text"*/
+        </style>
+    </head>
+
+    <body>
+
+        <div id="some-id" class="some-class">
+
+        </div>
+
+        <a href="http://www.link-group.eu" target="_blank" title="link">Link Group</a>
+        <a href="http://www.link-group.eu/careers" title="link careers">Link Careers</a>
+        <a href="http://www.link-group.eu/about-us-0" title="about-link">About Link</a>
+
+        <div class="wrapper">
+
+        </div>
+
+        <a href="demo.pdf">Download PDF document</a>
+        <a href="demo.doc">Download Word document</a>
+
+        <h1 class="top-header">Welcome</h1>
+        <p class="top-text">Hello world!</p>
+        <p class="top">Hello world again!</p>
+        <p class="top text">Hello world once more!</p>
+
+
+    </body>
+
 </html>
+
+
+
+Osnovni CSS selektori ilustrovani su tabelom 1.1.
+
+Selektor	Naziv	Opis
+*	univerzalni selektor	selektuje sve elemente na stranici
+P, h1, h2, div, span, body...	tipski selektori	omogućavaju selektovanje elemenata na osnovu naziva, odnosno tipa elementa
+.class	class selektor	selektuje elemente sa određenom vrednošću atributa class
+#id	id selektor	selektuje element sa određenom vrednošću id atributa
+A E	descendant selector	selektuje svaki E element koji je direktan ili indirektan potomak elementa A
+A > E	child selector	selektuje svaki E element koji je direktan potomak elementa A
+B + E	adjacent sibling selector	selektuje E element koji je naredni srodni element elementa B
+B ~ E	general sibling selector	selektuje svaki E element koji je naredni srodni element elementa B
+
+/*[attribute]	ispituje postojanje navedenog atributa na elementu
+[attribute="value"]	ispituje potpuno podudaranje vrednosti atributa
+[attribute*="value"]	ispituje postojanje dela vrednosti atributa koja se može naći bilo gde
+[attribute^="value"]	ispituje da li vrednost atributa započinje definisanom vrednošću
+[attribute$="value"]	ispituje da li se vrednost atributa završava definisanom vrednošću
+[attribute~="value"]	ispituje potpuno podudaranje ili postojanje definisane vrednosti koja mora biti izdvojena praznim prostorima
+[attribute|="value"]	ispituje potpuno podudaranje ili podudaranje početka vrednosti koji od ostatka mora biti odvojen karakterom crtica (-)*/

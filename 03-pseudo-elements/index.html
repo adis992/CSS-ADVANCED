@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title> 
+    <style>
+        /*razlika u pseudo elementima i  pseudoklasama je ta sto  u pseudoklasam umjesto : koristimo :: u pseudoelementima*/
+        p {
+            font-family: sans-serif;
+        }
+
+        /*
+        p::after {
+            content: " End of paragraph"; 
+            color: red; /*content-svojtvo, prikaz ide na kraju paragrafa
+        }
+        p::before {
+            content: "Start of paragraph ";
+            color: blue; /*content-svojtvo, prikaz ide na pocetku paragrafa
+        }*/
+
+        /* p::first-letter {
+            font-size: 130%;
+            color: red;  /*na ovaj nacin stilizujemo prvo slovo nekog paragrafa
+        }
+
+        p::first-line {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: blue;
+             /*na ovaj nacin stilizujemo prvu liniju nekog paragrafa i ako sirimo
+              browser sve u prvom redu odradujemo onim sto smo zapovidili
+        }   */
+
+        ::selection {
+            background: rgb(216, 76, 25);
+            color: rgb(245, 242, 242);
+        } /*na ovaj nacin stilizujemo selektovani tekst*, dok je pozadinabijele boje */
+
+
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu sem vel diam finibus lobortis.
+         In rhoncus neque odio, non maximus ex pretium quis. Vivamus interdum convallis ex ac efficitur.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu sem vel diam finibus lobortis.
+         In rhoncus neque odio, non maximus ex pretium quis. Vivamus interdum convallis ex ac efficitur.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu sem vel diam finibus lobortis.
+         In rhoncus neque odio, non maximus ex pretium quis. Vivamus interdum convallis ex ac efficitur.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu sem vel diam finibus lobortis.
+         In rhoncus neque odio, non maximus ex pretium quis. Vivamus interdum convallis ex ac efficitur.</p>
+</body>
+</html>

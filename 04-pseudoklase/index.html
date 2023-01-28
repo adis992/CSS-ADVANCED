@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>structural pseudo calasses</title>
+    <style>
+        /*p:first-child {  /*koji su prvi potomci svog roditelja
+            color: blue;
+        }
+
+        p:last-child {  /*selektovani ce biti 3 i paragraf 5, oni su zadnji potomci svog roditelja
+            color: blue;
+        } */
+
+        /*p:first-of-type {
+            color: blue;
+        }  prvi potomci svog tipa  0,1,3 cemo selektovati
+
+        p:last-of-type {
+            color: blue;
+        }  zadnji potomci svog tipa 2,3,5 cemo selektovati */
+
+       /* p:only-child {
+            color: blue;
+        }   jedini potomci svog roditelja 3, a broj 5 je nasljednik nije potomak, kada bih bio h3 naslov ne bi nista selektovao  
+
+        p:only-of-type {
+            color: blue;
+        }  jedini potomci svog tipa 3, identicno prethodnom a razliku cmo vidjeti u h3 naslovu 
+        
+        :nth-child(2) {  kada bih postavili umjesto 2 (odd)i (2n+1) dodje isto neparne selektovalo bih broj p2 i p5 paragraf, kada bih kucali even (2n+2)tada bih selektovalo samo parne brojeve
+            color: blue;
+        }   zelim da se selektuje svaki drugi potomak svog roditelja 0 je potomak body-a, zatim p1 je potomak h2 naslova, i 3 je potomak h3 */
+
+       /* :nth-last-child(2) {
+            color: blue;
+        }   drugi potomak svojih potomaka od pozadi tu bi bio selektovanbroj 4 i broj 2
+
+        :nth-of-type(2) {
+            color: blue;
+        }  drugi potomci svog roditelja a to su 4 i 2  a kad bi nth bio 3 tada bi selektovao p5 */
+
+        :nth-last-of-type(2) {
+            color: blue;
+        }   /*selektuje sve nth koji su potomci svoga tipa od pozadi unutar svog roditelja selektovat ce p4 i p1*/
+
+
+    
+    </style>
+</head>
+<body>
+    <h1>main heading</h1>
+    <p>paragraf 0. on nije u div elm.</p>
+    <div id="first-div" class="content">
+        <h2>SubHeading</h2>
+        <p>Paragraf 1 u divu</p>
+        <p>paragraf 2 u divu</p>
+        <div id="second-div" >
+            <h3>sub heading</h3>
+            <p>paragraf 3 u 2th divu</p>
+        </div>
+    </div>
+    <p>paragraf 4 nije u divu </p>
+    <p>paragraf 5 nije u divu</p>
+</body>
+</html>
