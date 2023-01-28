@@ -1,0 +1,22 @@
+{
+    "npm-intellisense.packageSubfoldersIntellisense": true,
+    "path-intellisense.ignoreTsConfigBaseUrl": true,
+    "path-intellisense.showHiddenFiles": true,
+    "npm.enableRunFromFolder": true,
+    "liveServer.settings.CustomBrowser": "chrome",
+    "svn.conflicts.autoResolve": true,
+    "svn.experimental.detect_encoding": true,
+    "svn.ignoreMissingSvnWarning": true,
+    "svn.multipleFolders.enabled": true,
+    "svn.showOutput": true,
+    "autoimport.doubleQuotes": true,
+    "application.experimental.rendererProfiling": true,
+    "workbench.editor.autoLockGroups": {
+        "terminalEditor": false
+    },
+    "azureFunctions.deploySubpath": "api",
+    "azureFunctions.postDeployTask": "npm install (functions)",
+    "azureFunctions.projectLanguage": "JavaScript",
+    "azureFunctions.projectRuntime": "~4",
+    "azureFunctions.preDeployTask": "npm prune (functions)"
+}

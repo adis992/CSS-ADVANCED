@@ -1,0 +1,33 @@
+{
+  "recommendations": [
+    "ms-azuretools.vscode-azurefunctions",
+    "ms-edgedevtools.vscode-edge-devtools",
+    "christian-kohler.npm-intellisense",
+    "reflectiondm.npmsmartimporter",
+    "amag2511.smart-index",
+    "smartytomato.smartopen",
+    "saionaro.smart-css-autocomplete",
+    "vscjava.vscode-java-dependency",
+    "alefragnani.project-manager",
+    "vscjava.vscode-java-pack",
+    "adamhartford.vscode-base64",
+    "ms-dotnettools.vscode-dotnet-runtime",
+    "steoates.autoimport",
+    "redhat.java",
+    "nucllear.vscode-extension-auto-import",
+    "georgewfraser.vscode-javac",
+    "moppitz.vscode-extension-auto-import",
+    "webostvsdk.webostv",
+    "ms-vscode.cmake-tools",
+    "webososesdk.webosose",
+    "mikestead.dotenv",
+    "jeremyrajan.webpack",
+    "yuhengshen.webpack",
+    "gogocrow.webpack-snippets",
+    "knisterpeter.vscode-webpack",
+    "webossdk.webosstudio",
+    "ms-azuretools.vscode-apimanagement",
+    "trabpukcip.vscode-npm-scripts",
+    "ms-vscode.azure-account"
+  ]
+}
