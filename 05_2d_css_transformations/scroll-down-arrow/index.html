@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <title>2D CSS Transformations - Scroll Down Arrow</title>
@@ -14,15 +13,15 @@
 
             h1 {
                 margin: 0;
-                transform: translateY(80px);
+                transform: translateY(80px); /* 80px razmak izmedju 2boxa */
             }
 
 
             #intro-section {
                 width: 100%;
-                height: 100vh;
+                height: 100vh;  /* 100% of the viewport height  sve sto korissnik vidi*/
                 background-color: #914E67;
-                position: relative;
+                position: relative; /* pozicioniranje */
             }
 
             #next-section {
@@ -33,30 +32,30 @@
 
             #scroll-down-arrow {
                 position: absolute;
-                bottom: 24px;
-                width: 46px;
-                height: 46px;
+                bottom: 24px;  /* 24px od donje ivice */
+                width: 46px; /* 46px sirina */
+                height: 46px; /* 46px visina */
 
                 margin: 0 auto;
                 left: 0;
                 right: 0;
 
                 border: 2px solid #fff;
-                border-radius: 100%;
+                border-radius: 100%; /* 100% zaokruzivanje ivica */ 
             }
 
             #scroll-down-arrow::before {
-                position: absolute;
-                content: '';
+                position: absolute; /* pozicioniranje */
+                content: ''; /* prazan content */
                 width: 16px;
                 height: 16px;
-                left: 0;
-                right: 0;
+                left: 0;    /* 0px od leve ivice */
+                right: 0; /* 0px od desne ivice */
                 top: 10px;
                 margin: 0 auto;
                 border-left: 2px solid #fff;
                 border-bottom: 2px solid #fff;
-                transform: rotate(-45deg);
+                transform: rotate(-45deg);  /* rotacija */
             }
         </style>
     </head>
@@ -65,7 +64,6 @@
         <div id="intro-section">
             <h1>Section 1</h1>
             <a id="scroll-down-arrow" href="#next-section"></a>
-
         </div>
         <div id="next-section">
             <h1>Section 2</h1>
