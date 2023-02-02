@@ -5,8 +5,8 @@
         <meta charset="UTF-8">
         <title>CSS Animation</title>
         <style>
-            /*@keyframes my-animation {
-                from {
+            /*@keyframes my-animation {     keyframes se koristi za animaciju 
+                from {                     from i to se koriste za animaciju od jedne vrednosti do druge
                     width: 250px;
                 }
 
@@ -15,8 +15,8 @@
                 }
             }*/
 
-            /*@keyframes my-animation {
-                0% {
+            /*@keyframes my-animation {   keyframes se koristi za animaciju
+                0% {            0% i 100% se koriste za animaciju od jedne vrednosti do druge
                     width: 250px;
                 }
 
@@ -61,31 +61,32 @@
 
 
             .box {
-                background-color: #A2687E;
-                background-image: url(star.png);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: 50%;
-                color: white;
-                margin: 64px auto;
-                font-family: sans-serif;
-                font-size: 28px;
+                background-color: #A2687E; /* boja pozadine */
+                background-image: url(star.png);    /* dodavanje slike */
+                background-repeat: no-repeat; /* da se ne ponavlja */
+                background-position: center;    /* pozicioniranje slike */
+                background-size: 50%;   /* velicina slike */
+                color: white;  /* boja teksta */
+                margin: 64px auto; /* centriranje */
+                font-family: sans-serif; /* font */
+                font-size: 28px;  
                 width: 250px;
                 height: 180px;
-                border-radius: 8px;
-                /*animation-name: my-animation;
-                animation-duration: 3s;
-                animation-delay: 2s;
-                animation-iteration-count: 2;
-                animation-direction: reverse;
-                animation-fill-mode: forwards;*/
+                border-radius: 8px; /* zaokruživanje rubova */
+                /*animation-name: my-animation;   /* ime animacije 
+                animation-duration: 3s;   /* trajanje animacije 
+                animation-delay: 2s;    /* vreme od kada se animacija pokrece 
+                animation-iteration-count: 2;  /* broj ponavljanja animacije 
+                animation-direction: reverse;   /* smer animacije unazad
+                animation-fill-mode: forwards;*/   /* animation: ime_animacije trajanje_animacije easing_animacije delay_animacije broj_ponavljanja_animacije smer_animacije fill_mode_animacije play_state_animacije; 
+               /* animation-iteration-count: infinite;   beskonacna animacija */  
 
-                animation: my-animation 3s ease 2s 2 reverse forwards running;
+                animation: my-animation 3s ease 2s 2 reverse forwards running; /* animation: ime_animacije trajanje_animacije easing_animacije delay_animacije broj_ponavljanja_animacije smer_animacije fill_mode_animacije play_state_animacije; */
 
             }
 
-            .box:hover {
-                animation-play-state: paused;
+            .box:hover {  /* zaustavljanje animacije kada dodjem misom na sliku */
+                animation-play-state: paused; /* zaustavljanje animacije */
             }
         </style>
     </head>
