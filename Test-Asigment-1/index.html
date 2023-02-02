@@ -5,40 +5,37 @@
     <meta charset="UTF-8">
     <title>Advanced CSS - Assignment 1</title>
     <style>
-        a[href^="https://www.google.com/"] {
+        /* Zelena boja za linkove koji vode ka sajtu Google */
+        a[href^="https://www.google."] {
           color: green;
         }
-        
-        a[href="https://www.link-group.eu/"] {
+  
+        /* Crvena boja za link koji vodi ka sajtu LINK group */
+        a[href="https://www.linkgroup.com"] {
           color: red;
         }
-        
-        #second-div p:nth-of-type(odd) {
-          color: red;
+  
+        /* Bojenje paragrafa unutar second-div elementa */
+        .second-div p:nth-child(even) {
+         color: red;
         }
-        
-        #second-div p:nth-of-type(even) {
-          color: blue;
+        .second-div p:nth-child(odd) {
+         color: blue;
         }
-        
-        #first-div p:first-of-type:after {
-          content: " - NEW";
+  
+        /* Dodavanje "NEW" i žute boje na krajeve Paragrafa 2 i 3 */
+        p>nth-of-type(2)::after,
+        p>nth-of-type(3)::after {
+          content: " NEW";
           color: yellow;
         }
-        
-        #first-div p:last-of-type:after {
-          content: " - NEW";
-          color: yellow;
-        }
-        
-        p:last-of-type {
+  
+        /* Italic teksta na Paragraph 10 elementu prilikom hovera */
+        p>nth-of-type(10):hover {
           font-style: italic;
         }
-        
-        p:last-of-type:hover {
-          font-style: normal;
-        }
-        </style>
+      </style>
+            
 </head>
 
 <body>
