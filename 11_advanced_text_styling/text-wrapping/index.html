@@ -8,11 +8,14 @@
 
             p {
                 width: 320px;
-                margin: 0 auto;
+                margin: 0 auto;              /*ovo je za centriranje elementa unutar roditelja*/
                 font-family: sans-serif;
                 font-size: 18px;
                 background-color: #FFD58E;
-                hyphens: auto;
+                hyphens: auto;                 /* omogućava da se ukine mogućnost dodavanja crtica na mestima na kojima se prelom teksta obavlja unutar reči i to korišćenjem vrednosti none.*/
+                /*overflow-wrap: normal;        ovo je za prelom redova ako nije default beowser*/
+               /* overflow-wrap: break-word;    ovo je za prelom redova ako nije default beowser, ako je RIJEC veca od boxa prebaci u novi automatski tj prelomi */
+                 /*word-wrap: break-all;           ovo je za prelom rijeci ako je TEXT veca od boxa prebaci u novi automatski tj prelomi znaci CIJELI TEXT UZIMAU OBZIR*/
             }
         </style>
     </head>
@@ -23,6 +26,6 @@
             it becomes four words: "Danube steamship company captain." However, it's not the only super long word in the
             German
             language and, technically, it's not even the longest.</p>
-    </body>
-
+    </body>                                                                              <!-- &shy;  ovo se koristi za prelom samo ako je prelom na tom mjestu tacno a hyphens je MANUAL-->
+                            <!--&hyphen; je uvijek vidljiv i bezuslovan je-->
 </html>

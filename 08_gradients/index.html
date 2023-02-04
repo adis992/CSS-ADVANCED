@@ -29,19 +29,20 @@
             }
 
             #box-2 {
-                background: linear-gradient(to left, #914E67, #D65F4F);
+                background: linear-gradient(to left, #914E67 50%, #D65F4F 50%);       // 50% je postotak gdje se boje mijenjaju u cisto linijiski bez preljavanja jedne u drugu
             }
 
             #box-3 {
-                background: linear-gradient(to top, #914E67, #D65F4F);
-            }
+                background: linear-gradient(to top, #914E67, #D65F4F);           // kada bih stavili 4boja i 4postotka  onda bih mogli apraviti 3 razlicite boje kao zastavu
+            }                                                                     //kada bih stavili 1 boju i transparentnu boju onda bih mogli napraviti sjenku
 
             #box-4 {
                 background: linear-gradient(to bottom, #914E67, #D65F4F);
             }
 
             #box-5 {
-                background: linear-gradient(to top right, #914E67, #D65F4F);
+                background: linear-gradient(transparent -80%, rgb (69, 79, 214) 80%), url(star.jpg);   // transparentna boja je 0% a druga boja je 100% i onda se mijenja postepeno dok donji dio se ne vidi cisto
+
             }
 
             #box-6 {
@@ -53,23 +54,25 @@
             }
 
             #box-8 {
-                background: linear-gradient(to bottom left, #914E67, #D65F4F);
+                background: linear-gradient(to bottom left, #914E67, #D65F4F);                // to je smjer u kojem se boje mijenjaju
             }
 
             #box-9 {
-                background: linear-gradient(60deg, #914E67, #D65F4F);
-            }*/
+                background: linear-gradient(60deg, #914E67, #D65F4F);                                // 60deg je kut u kojem se boje mijenjaju
+            }*/                                                                    
 
             #box-1 {     /**/
-                background: repeating-radial-gradient(#E8BF1C 0px, #914E67 30px);
+                background: repeating-radial-gradient(#E8BF1C 0px, #914E67 30px);   
             }
         </style>
     </head>
 
-    <body>
-        <div id="main-container">    
-            <div class="box" id="box-1"></div>
+    <body>              
+        <div id="main-container">       <!--  -->
+            <div class="box" id="box-1"></div>    
         </div>
+
+      
     </body>
 
 </html>

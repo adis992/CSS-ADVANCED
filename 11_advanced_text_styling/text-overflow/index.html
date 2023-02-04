@@ -9,30 +9,31 @@
                 font-family: sans-serif;
             }
 
-            .tile {
+            .tile {            
                 width: 280px;
                 border: 1px solid #f1f1f1;
-                box-shadow: 4px 4px 8px #efefef;
-                border-radius: 8px;
-                overflow: hidden;
+                box-shadow: 4px 4px 8px #efefef;     /*sijenka*/
+                border-radius: 8px;              /*zaokruzivanje ivica*/
+                overflow: hidden;            /*da bi vidjeli zaobljenje tj border radius moramo ovo sakriti*/
             }
 
             .tile-background {
 
                 height: 200px;
                 background-image: url(background.png);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
+                background-repeat: no-repeat;                /*slika se ne ponavlja*/
+                background-position: center;            /*centrirana*/
+                background-size: cover;              /*slika se uvek prilagodi-popunjava elem na kojem se primjenjuje*/
 
             }
 
             .tile-text {
-                font-size: 20px;
-                margin: 16px 0px;
+                font-size: 20px;            /*font size*/
+                margin: 16px 0px;           /*margin: top right bottom left*/
 
-                text-overflow: ellipsis;
-                overflow: hidden;
+                text-overflow: ellipsis;       /*ovo je za PRELOM rijeci ako je TEXT veca od boxa prebaci u novi automatski tj prelomi znaci CIJELI TEXT UZIMAU OBZIR i clip da je odjsecen pop defaultu aelipsis
+                signalizira prelamanje txta sa prikazivanjem ...   */
+                overflow: hidden;   /*mora imati definisan samostalno overflow i browser ce dodati ...  na kraj rijeci */
             }
         </style>
     </head>

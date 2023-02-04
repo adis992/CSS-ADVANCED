@@ -11,28 +11,28 @@
             }
 
             div {
-                display: inline-block;
+                display: inline-block;       /*da bi se prikazali jedan pored drugog u liniji*/
             }
 
             #horizontal-tb {
-                writing-mode: horizontal-tb;
+                writing-mode: horizontal-tb;   /*moze imat x vrijednosti a ova definise prostiranje sadrzaja horizontalno sa lijeva na desno i odozgo na dole*/
             }
 
             #vertical-lr {
-                writing-mode: vertical-lr;
+                writing-mode: vertical-lr;     /*moze imat x vrijednosti a ova definise prostiranje sadrzaja-TXTA recimo vertikalno odozgo pa dole  a sa lijeva na desno linije  123456 */
             }
 
 
             #vertical-rl {
-                writing-mode: vertical-rl;
+                writing-mode: vertical-rl;     /*moze imat x vrijednosti a ova definise prostiranje sadrzaja-TXTA recimo vertikalno odozgo pa dole  a sa desna na lijevo linije  654321 */
             }
         </style>
     </head>
 
     <body>
-        <div id="horizontal-tb">
-            <ol>
-                <li>Google Chrome</li>
+        <div id="horizontal-tb">     <!--horizontalno od lijeva na desno i odozgo na dole-->
+            <ol>    <!--ordered list-->
+                <li>Google Chrome</li>  <!--list item-->
                 <li>Mozilla Firefox</li>
                 <li>Safari</li>
                 <li>Opera</li>
@@ -40,9 +40,9 @@
             </ol>
         </div>
 
-        <div id="vertical-lr">
-            <ol>
-                <li>Google Chrome</li>
+        <div id="vertical-lr">    <!--vertikalno od gore na dole i sa lijeva na desno-->
+            <ol>   <!--ordered list-->
+                <li>Google Chrome</li>  <!--list item-->
                 <li>Mozilla Firefox</li>
                 <li>Safari</li>
                 <li>Opera</li>
@@ -50,7 +50,7 @@
             </ol>
         </div>
 
-        <div id="vertical-rl">
+        <div id="vertical-rl">       <!--vertikalno od gore na dole i sa desna na lijevo-->
             <ol>
                 <li>Google Chrome</li>
                 <li>Mozilla Firefox</li>
