@@ -7,13 +7,16 @@
         <title>Responsive Content - Images</title>
         <style>
             img {
-                width: 100%;
+                width: 100%;        /*ovo je za sliku koja je u html-u*/
+                /*max-width: 500px;  da ne prelazi browser velicinu postavimo ovo*/
             }
 
-            #hero {
+            #hero { 
                 width: 600px;
                 height: 400px;
                 background-image: url("tokyo-2048w.jpg");
+                background-size: contain;  /*imamo 2 opcije contain i cover cover ide sa odsijecanjem u nekim momentima*/
+                /*contain/ povecana slika ili umanjena bez odsijecanja i moramo definisati velicinu nad samim elemntom i ukljuzciti no repeat bck.*/
             }
 
             @media screen and (max-width: 1024px) {
@@ -34,7 +37,7 @@
                 }
             }
 
-            @media only screen and (min-resolution: 2dppx) and (max-width: 414px) {
+            @media only screen and (min-resolution: 2dppx) and (max-width: 414px) {  /*min-resolution je za retina displaye/ doc per pixel-ddpx(broj tacaka po pixelu) */
 
                 #hero {
                     background-image: url("tokyo-414w@2.jpg");
@@ -52,23 +55,23 @@
 
     <body>
 
-        <!--<img srcset="tokyo-414w.jpg 414w,
+        <!--<img srcset="tokyo-414w.jpg 414w,    
                      tokyo-768w.jpg 768w,
                      tokyo-1024w.jpg 1024w,
                      tokyo-2048w.jpg 2048w"
-             sizes="(max-width: 414px) 414px,
+             sizes="(max-width: 414px) 414px,      /*ako je sirina manja od 414px onda je sirina 414px*/
                     (max-width: 768px) 768px,
                     (max-width: 1024px) 1024px,
                     1280px"
-             src="tokyo-1024w.jpg" alt="Tokyo Neon Lights">-->
+             src="tokyo-1024w.jpg" alt="Tokyo Neon Lights">-->       <!--ako ne postoji nista od navedenog koristit  ce ovu velicinu i slikku-->
 
 
 
 
-        <!--<img srcset="tokyo-414w.jpg,
-                         tokyo-828w.jpg 2x,
-                         tokyo-1242w.jpg 3x"
-                 src="tokyo-828w.jpg" alt="Tokyo Neon Lights">-->
+        <!--<img srcset="tokyo-414w.jpg,             
+                         tokyo-828w.jpg 2x,      /*ako je retina display onda ce koristiti ovu sliku X2 je odnos hard. i soft.*/
+                         tokyo-1242w.jpg 3x"     /*ako je retina display onda ce koristiti ovu sliku X3 je odnos hard. i soft.*/
+                 src="tokyo-828w.jpg" alt="Tokyo Neon Lights">-->      <!--ako ne postoji nista od navedenog koristit  ce ovu velicinu i slikku     DISABLE CACHE i dev tools-u -->
 
         <picture>
             <source srcset="tokyo-414w.jpg" media="(max-width: 414px)">

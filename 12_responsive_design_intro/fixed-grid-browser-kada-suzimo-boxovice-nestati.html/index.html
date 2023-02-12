@@ -3,25 +3,24 @@
 
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CSS Viewport</title>
+        <title>Responsive Design Intro - Fixed Grid</title>
         <style>
             .row {
-                width: 90%;
-                max-width: 960px;
-                margin: 0 auto;
+                width: 960px;           /*sirina rowa*/
+                margin: 0 auto;         /*da se centriraju elementi*/
             }
 
             .row::after {
                 content: "";
-                display: block;
-                clear: left;
+                display: block;       
+                clear: left;       /*ovo je da se elementi ne bi prelazili jedan preko drugog*/
             }
 
             .column {
                 float: left;
-                width: 16.66%;
+                width: 160px;
                 box-sizing: border-box;
+
                 padding: 8px;
             }
 
@@ -29,27 +28,6 @@
                 height: 144px;
                 background-color: #914E67;
             }
-
-
-            @media screen and (max-width: 1024px) {
-                .column {
-                    width: 33.33%;
-                }
-            }
-
-            @media screen and (max-width: 768px) {
-                .column {
-                    width: 50%;
-                }
-            }
-
-            @media screen and (max-width: 414px) {
-                .column {
-                    width: 100%;
-                }
-            }
-
-            
         </style>
     </head>
 

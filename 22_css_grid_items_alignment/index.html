@@ -10,15 +10,22 @@
                 display: grid;
                 grid-template-columns: 160px 160px 160px;
                 grid-auto-rows: minmax(100px, 150px);
-                gap: 16px;
-                height: 50vh;
+                gap: 16px; /* gap je kao padding izmedju grid elemenata */
+                height: 50vh;  /* 50% visine viewport-a */
+               /* align-items: start; /* start-odozgo ka dole, end-odozd ka gore, center-, stretch-slicno kao normal u ovoj situaciji, a kad bi bila slika ne bi bilo ok */
+                /* justify-items: start; /* start-s lijevo na desno, end-sa desno ka lijevo , center-, stretch-razvlaci se koliko ima prostora isto kao i normal osim ako su slike u pitanju*/
+                /* align-content: start; /* sadrzaj u gridu  start-odozgo ka dole, end-odozd ka gore, center-, stretch-slicno kao normal u ovoj situaciji, a kad bi bila slika ne bi bilo ok */
+                /* justify-content: start; /* sadrzaj u gridu start-s lijevo na desno, end-sa desno ka lijevo , center-, stretch-razvlaci se koliko ima prostora isto kao i normal osim ako su slike u pitanju*/
+
             }
 
-            #grid1>div {
+            #grid1>div {   /* grid item, direktni div potomci ce dobiti sljedece ispod */
                 background-color: #914E67;
                 color: white;
 
             }
+
+            /*mozemo korisiti i align-self: start na pojedinacnom elementu samo sto div moramo staviti pod klasu li id da mozemo stilizirati*/
         </style>
     </head>
 

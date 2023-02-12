@@ -5,35 +5,40 @@
     <title>Flexbox Layout Demo</title>
     <style>
         body {
-            margin: 0;
+            margin: 0; 
             color: white;
             font-family: sans-serif;
+            display: flex;
+            
+            height: auto;
         }
 
         #wrapper {
             display: flex;
-            flex-flow: row wrap;
-            text-align: center;
+            flex-flow: row wrap;  /*prelamanje layouta kad nema dovoljno prostora u 1 liniji, row je orjentacija sa lijevo na desno i weap prelamanje*/ 
+            text-align: center; /*text u flexboxu centriramo*/
             margin: 0;
+            height: auto;
+             
         }
 
         #header,
         #footer {
-            flex-basis: 100%;
+            flex-basis: 100%;  /*100% sirine i u jednom redu zauzima kompletan prostor*/
             /*shorthand*/
             /*flex: 1 100%;*/
         }
 
         .aside {
             flex-basis: auto;
-            flex-grow: 1;
+            flex-grow: 1;   /*1 je default vrijednost...uvecanje elementa*/
             /*shorthand*/
             /*flex: 1 auto; */
         }
 
         #main {
-            flex-grow: 5;
-            flex-basis: 0%;
+            flex-grow: 5;  /*1 je default vrijednost...uvecanje elementa*/
+            flex-basis: 0%;  /*0% sirine i u jednom redu zauzima kompletan prostor*/
             /*shorthand*/
             /*flex: 5;*/
         }
@@ -43,6 +48,8 @@
         .aside,
         #main {
             padding: 10px;
+            
+            
         }
 
         #header {
@@ -60,14 +67,18 @@
 
         #footer {
             background-color: #444142;
+            align-self: flex-end;
         }
 
         #aside-1 {
             background-color: #535c63;
+            height: auto;
+
         }
 
         #aside-2 {
             background-color: #566875;
+            
         }
     </style>
 </head>

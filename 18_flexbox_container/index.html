@@ -6,9 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexbox Intro</title>
     <style>
-    #flexbox1 {
-        display: flex;
-        border: 1px solid black;
+    #flexbox1 {  
+        display: flex;  /*flexbox je display property, a flex je value ovako se pravi flexbox*/
+        border: 1px solid black;  /*da se vidi ivica*/
+        height: 50vh; /*height je 50% viewporta-visina*/
+        flex-direction: row; /*row-reverse je da se poddivovi okrenu redoslijed, column-reverse je da se kolone okrenu, row je po defaultu s desna na lijevo a column obrnuto*/
+        justify-content: flex-end; /*flex-end je da se sve poravna na desno, flex-start je da se sve poravna na lijevo, center je da se sve poravna na sredinu, space-between je da se sve poravna na sredinu ali sa razmakom izmedju, space-around je da se sve poravna na sredinu ali sa razmakom izmedju i na krajevima*/
+        /*align-items: center; flex-start je da se sve poravna na vrh, flex-end je da se sve poravna na dno, center je da se sve poravna na sredinu, stretch je da se razvuku po visni browsera i elemnti mijenjaju dimenzije-a ako su definisane visine nece se promijeniti, space-around je da se sve poravna na sredinu ali sa razmakom izmedju i na krajevima, baseline sluzi za poravnanje elemenata po osnovnoj liniji texta*/
+        flex-wrap: wrap; /*wrap je da se elementi prelaze u novi red, nowrap je da se elementi ne prelaze u novi red, wrap-reverse je da se elementi prelaze u novi red ali obrnut redoslijed*/
+        align-content: center; /*flex-start je da se sve poravna na vrh, flex-end je da se sve poravna na dno, center je da se sve poravna na sredinu, stretch je da se razvuku po visni browsera i elemnti mijenjaju dimenzije-a ako su definisane visine nece se promijeniti, space-around je da se sve poravna na sredinu ali sa razmakom izmedju i na krajevima, baseline sluzi za poravnanje elemenata po osnovnoj liniji texta*/
+        flex-grow: 1; /*flex-grow je da se elementi razvuku po visini browsera, flex-shrink je da se elementi smanje po visini browsera, flex-basis je da se elementi razvuku po visini browsera ali ne preko 100%*/
+         /*align-self: center; sluzi za poravnanje  1 elementa u kontejneru*/
+         /*ako koristimo samo flex to vrijei za grow, shrink i basis em*/
     }
 
     #flexbox1 > div {
@@ -17,7 +26,7 @@
         margin: 5px;
     }
 
-    #flexbox1 > div:nth-child(1) {
+    #flexbox1 > div:nth-child(1) { 
         background-color: #F0C419;
     }
 

@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">     <!--ovo je viewport(vidnopolje) sadrzaj vidnog polja- softweska sirina uredjaja, a initial skaliranja/zumiranja nece nikako biti-->
         <title>Responsive Content - Text</title>
         <style>
             /*******************BASIC APPROACH********************************/
@@ -13,13 +13,13 @@
             }
 
 
-            @media screen and (max-width: 1024px) {
+            @media screen and (max-width: 1024px) {            /*screen je medij, a max-width je uslov*/
                 p {
                     font-size: 18px;
                 }
             }
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 768px) {        /*screen je medij, a max-width je uslov*/
                 p {
                     font-size: 17px;
                 }
@@ -36,8 +36,8 @@
             /*******************EM APPROACH********************************/
 
             /*body {
-                font-size: 1.3em;
-            }
+                font-size: 1.3em;      /*1em je 16px, a 1.3em je 20.8px*/
+            
 
             p {
                 font-size: 1em;
@@ -68,11 +68,11 @@
                 }
             }
 
-            @media screen and (max-width: 414px) {
+            @media screen and (max-width: 414px) {         /*ako je sirina uredjaja manja od 414px, onda ce font biti 1em*/
                 body {
                     font-size: 1em;
                 }
-            }*/
+            }
 
 
 

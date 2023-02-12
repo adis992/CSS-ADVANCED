@@ -14,17 +14,17 @@
 
         #grid-container {
           display: grid;
-          grid-gap: 8px;
-          grid-template-columns: 1fr 3fr;
-          grid-template-areas:
-          "header  header"
-          "sidebar content"
-          "footer  footer";
+          grid-gap: 8px; /* razmak izmedju grid elemenata */
+          grid-template-columns: 1fr 3fr;   /* koliko ce biti sirine kolone, fractional...br 3fr oznacava da ce kolona 2 biti 3x sira od prve kolone*/
+          grid-template-areas:  /* definise gde ce se nalaziti elementi u gridu tj kako pozicionirati */
+          "header  header"   /*prvi red*/
+          "sidebar content"    /*drugi red*/
+          "footer  footer";    /*treci red*/
 
       }
 
     header, article aside, footer {
-        padding: 16px;
+        padding: 16px;  /* padding od 16px za ovu vrijednost smo odmaknuli sadrzaj od ivica boxa */
     }
 
     header {

@@ -14,7 +14,7 @@
             .row::after {
                 content: "";
                 display: block;
-                clear: left;
+                clear: left;    
             }
 
             .column {
@@ -30,21 +30,21 @@
             }
 
 
-            @media screen and (max-width: 1024px) {
-                .column {
-                    width: 33.33%;
+            @media screen and (max-width: 1024px) {         /*ako je sirina ekrana manja od 1024px, onda ce se izvrsiti ovaj kod*/
+                .column { 
+                    width: 33.33%;        /*sirina vidnog polja*/
                 }
             }
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 768px) {     /*ako je sirina ekrana manja od 768px, onda ce se izvrsiti ovaj kod*/
                 .column {
-                    width: 50%;
+                    width: 50%;      /*sirina vidnog polja*/
                 }
             }
 
-            @media screen and (max-width: 414px) {
+            @media screen and (max-width: 414px) {         /*ako je sirina ekrana manja od 414px, onda ce se izvrsiti ovaj kod*/
                 .column {
-                    width: 100%;
+                    width: 100%;        /*sirina vidnog polja*/
                 }
             }
 

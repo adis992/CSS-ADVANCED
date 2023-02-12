@@ -6,27 +6,27 @@
         <title>Responsive Design Intro - Responsive Grid</title>
         <style>
             .row {
-                width: 90%;
-                max-width: 960px;
-                margin: 0 auto;
+                width: 90%;   /*sirina rowa*/
+                max-width: 960px;   /*max sirina rowa, ovo koristimo kada pravimo resposivni sajt*/
+                margin: 0 auto;  /*da se centriraju elementi*/
             }
 
             .row::after {
-                content: "";
-                display: block;
+                content: "";       
+                display: block;      
                 clear: left;
             }
 
             .column {
-                float: left;
-                width: 16.66%;
-                box-sizing: border-box;
-                padding: 8px;
+                float: left;  /*ovo je za da se elementi poredaju jedan pored drugog*/
+                width: 16.66%;  /*sirina kolone procentualno, ovo se zove reesponsive grid*/
+                box-sizing: border-box;    /*da se ne bi smanjivala sirina kolone i na ovaj nacin padding ispod ulazi u zbir ovoga da ne prebacuje u novi red*/
+                padding: 8px;  /*razmak izmedju kolona*/
             }
 
             .box {
-                height: 144px;
-                background-color: #914E67;
+                height: 144px;        /*visina boxa*/
+                background-color: #914E67;  /*boja boxa*/
             }
         </style>
     </head>

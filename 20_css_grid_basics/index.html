@@ -3,17 +3,24 @@
 
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <title>CSS Grid Basics</title>
         <style>
-            #grid1 {
-                display: grid;
+            #grid1 {         /* grid container */
+                display: grid;     /* na ovaj nacin kreiramo GRID tj. resetkasti kontejner u grid elementu, a moze se grid kreirati i sa inline-grid */
+                    
+               /*  grid-auto-flow: row;   /* default je row, ali mozemo da ga menjamo na column, row dense, column dense */
+              /*   grid-auto-columns: 180px;  /* koliko ce biti sirine kolone */
+              /*   grid-auto-rows: 120px;  /* koliko ce biti visine reda */
+              /*   grid-template-columns: 100px 100px 100px;  /* moze biti auto auto auto....definise koliko ce biti sirine kolone explicitno tj kreirat cemo 3 kolone u 2 reda */
+             /*    grid-template-rows: 100px 100px;  /* koliko ce biti visine reda explicitno tj kreirat cemo 2 reda u 3 kolone */
+                
             }
         </style>
     </head>
 
     <body>
-        <div id="grid1">
+        <div id="grid1">         <!-- grid container (moze se ravnati i redati i po x i po y osi, grid kont je uglavnom 1 a grid elemnata moze biti vise)-->
             <div>One</div>
             <div>Two</div>
             <div>Three</div>

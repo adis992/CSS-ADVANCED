@@ -7,21 +7,21 @@
     <title>Flexbox Intro</title>
     <style>
     #flexbox1 {
-        display: flex;
-        border: 1px solid black;
+        display: flex;  /*flexbox je display property, a flex je value ovako se pravi flexbox*/
+        border: 1px solid black;  /*okvir */
     }
 
     #flexbox1 > div {
         width: 80px;
         height: 80px;
-        margin: 5px;
+        margin: 5px;  /*sve 4 margine*/
     }
 
-    #flexbox1 > div:nth-child(1) {
+    #flexbox1 > div:nth-child(1) {  
         background-color: #F0C419;
     }
 
-    #flexbox1 > div:nth-child(2) {
+    #flexbox1 > div:nth-child(2) {  
         background-color: #4FBA6F;
     }
 
@@ -34,8 +34,8 @@
 </head>
 
 <body>
-    <div id="flexbox1">
-        <div>A</div>
+    <div id="flexbox1">        <!--flexbox1 je roditelj divova i ako smo svojstvo dali flex ostale poddivove pravi u flex iteme-->
+        <div>A</div>      <!--prvi div (felex-itemi )-->
         <div>B</div>
         <div>C</div>
     </div>
