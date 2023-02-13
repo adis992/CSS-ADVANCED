@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid using CSS Grid</title>
+    <style>
+        body {
+            background-color: #b9b1b1;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 960px;
+            height: 90%;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-auto-flow: row;
+            gap: 8px;
+            background-color: #b9b1b1;
+            color: black;
+            border-radius: 15px;
+            align-items: end;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 10px;
+            align-items: center;
+
+
+
+
+        }
+
+        .container h3 {
+            align-self: flex-end;
+        }
+
+
+        .container>div {
+            background-color: #185c94;
+            color: black;
+            background-repeat: no-repeat;
+
+            background-size: contain;
+            min-height: 150px;
+            max-height: 220px;
+            min-width: 100px;
+            max-width: 220px;
+
+
+        }
+
+        .box {
+
+            background-color: #914E67;
+            background-position: center;
+            background-image: url(placeholder-image.png);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border-radius: 15px 15px 15px 15px;
+
+        }
+
+        .text-overlay {
+            background-color: rgb(202, 197, 197);
+            width: 100%;
+            height: 30px;
+            position: absolute;
+
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0px 0px 15px 15px;
+
+        }
+
+        h3 {
+            grid-column: 1 / 6;
+        }
+
+        p {
+            align-self: flex-start;
+            grid-column: 1 / 5;
+
+        }
+
+
+
+
+
+        @media screen and (max-width: 1024px) {
+
+
+
+            .container {
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                grid-auto-flow: row;
+                justify-content: center;
+                align-items: end;
+
+            }
+
+            h3 {
+                grid-column: 1 / 6;
+            }
+
+            p {
+                grid-column: 1 / 5;
+            }
+
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+                grid-auto-flow: row;
+                justify-content: center;
+                align-items: end;
+            }
+
+            h3 {
+                grid-column: 1 / 4;
+            }
+
+            p {
+                grid-column: 1 / 4;
+            }
+
+        }
+
+        @media screen and (max-width: 380px) {
+            .container {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(13);
+                grid-auto-flow: row;
+                margin: 0 auto;
+            }
+
+            h3 {
+                grid-column: 1 / 2;
+            }
+
+            p {
+                grid-column: 1 / 2;
+                max-width: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h3>Gallery Heading</h3>
+        <div class="box">
+            <div class="text-overlay">Thumb 1</div>
+        </div>
+        <div class="box">
+            <div class="text-overlay">Thumb 2</div>
+        </div>
+        <div class="box">
+            <div class="text-overlay">Thumb 3</div>
+        </div>
+        <div class="box">
+            <div class="text-overlay">Thumb 4</div>
+        </div>
+        <div class="box">
+            <div class="text-overlay">Thumb 5</div>
+        </div>
+        <div class="box">
+            <div class="text-overlay">Thumb 6</div>
+        </div>
+        <div class="box">
+            <div class="text-overlay">Thumb 7</div>
+        </div>
+        <div class="box">
+            <div class="text-overlay">Thumb 8</div>
+        </div>
+        <div class="box">
+            <div class="text-overlay">Thumb 9</div>
+        </div>
+        <div class="box">
+            <div class="text-overlay">Thumb 10</div>
+        </div>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida, enim nec fermentum ullamcorper,
+            eros metus rhoncus ante, in ornare arcu purus id est.
+            Duis viverra mi felis, nec feugiat tortor scelerisque ut. Ut efficitur ac ipsum a viverra.</p>
+    </div>
+
+</body>
+
+</html>
