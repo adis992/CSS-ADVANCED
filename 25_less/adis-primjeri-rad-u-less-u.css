@@ -1,0 +1,61 @@
+/*body {
+    font-family: sans-serif;
+}
+*/
+/*1 PRIMJER PROMJENJIVE KORISTE SE SA KARAKTEROM @NAZIV I VRIJEDNOS */
+@import "common.css";
+body {
+  font-family: sans-serif;
+  color: #333;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+@media (min-width: 1280px) {
+  .box {
+    width: 1024px;
+  }
+}
+article h1 {
+  color: red;
+}
+article h2 {
+  color: blue;
+}
+article p {
+  color: green;
+}
+.box {
+  width: 960px;
+}
+@media (min-width: 1280px) {
+  .box {
+    width: 800px;
+  }
+}
+.foo {
+  color: blue;
+}
+#text-1 {
+  color: blue;
+  font-size: 20px;
+}
+#text-2 {
+  color: blue;
+  font-size: 30px;
+}
+@media (min-width: 320px) {
+  .box {
+    width: 100%;
+  }
+}
+.box {
+  width: 600px / 960px * 100%;
+}
+@media (min-width: 320px) {
+  .box {
+    width: 50%;
+  }
+}

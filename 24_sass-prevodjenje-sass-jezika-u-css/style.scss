@@ -1,0 +1,139 @@
+/*
+@import "colors";       /*importovanje drugog fajla saas-a*
+@import "values";        /*importovanje drugog fajla saas-a*
+
+
+body {         /*body je selektor*
+  font-family: sans-serif;          /*font-family je svojstvo a sans-serif je vrijednost svojstva*
+  font-size: $main-font-size;        /*$main-font-size je varijabla iz fajla values.scss*
+  color: $primary-light-color;       /*$primary-light-color je varijabla iz fajla colors.scss*
+}
+*/
+
+
+.box {
+  width: 600px / 960px * 100%;
+  height: 400px;
+  background-color: blue;
+}
+
+/*scss i css su skoro pa potpuno isti a razlika je u tome sto browseri citaju samo css kod i moramo ga prevesti kroz cmd*/
+/*prevodjenje scss u css se vrsi kroz cmd na ovaj nacin*/
+/*sass  style.scss:style.css...........nakonn ovoga dobijamo nova 2 fajla a to su style.css i style.css.map*/
+/*sass --watch style.scss:style.css        ovo je automnatsko prevodjenje i cim izmijenimo bilo sta u scss u cmd ce pisati compiled iz tog u to */
+
+
+/*saas varijable zapocinju sa $ karakterom nakon koga slijedi neki naziv varijable*/
+/*saas varijable se mogu koristiti u svim css svojstvima*/
+/* ako smo definisali kao ispod*/
+ 
+
+
+
+/*primjer 1*/
+/*   
+$primary-dark-color: #f00;
+
+body {
+  $primary-dark-color: blue;  /*KADA BIH DODALI !global tek tada bi koristilo ovu boju znaci h1 bi bio plave boje jer je css varijabla postala globalna*
+   /*vrijednost saas na plavu smo definisali i ovako se ne moze..........SAS VARIJABLA NIJE VIDLJIVA IZNAD BLOKA I KORISTIT CE UVIJEK GLOBALNA VAR. *
+  font-family: sans-serif;
+}
+
+h1 {
+  color: $primary-dark-color;
+}
+
+*/
+
+
+
+
+/*primjer 2*/
+/*
+article {
+  h1 {
+    color: red;
+  }
+ h2 {
+    color: blue;
+  }
+  p {
+    color: green;
+  }
+}
+*/
+
+
+
+
+
+/*primjer 3             MIXIn*/
+/*mixin je funkcija koja prima parametre i vraca vrijednost*
+/*mixin se definise sa @mixin i onda ime funkcije*
+/*mixin se poziva sa @include i onda ime funkcije*
+/*mixin se moze pozvati vise puta
+/*mixin se moze pozvati unutar mixin-a*
+/*mixin se moze pozvati unutar media query-a*
+@mixin transform($value) {
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -ms-transform: $value;
+  -o-transform: $value;
+  transform: $value;
+  }
+
+
+  .box {
+    @include transform(rotate(30deg));         /*mixin se poziva sa @include i onda ime funkcije*/ /*vrijednost rotate ce biti umetnuta za vrijednost svih $value u mixin transform*
+  }
+
+  */
+
+
+
+
+
+
+
+/*primjer 4 naslijedjivanje ako se nesto ponavlja vise puta unutar vise css opisa...moguce definisati u sledecem obliku  sa SELEKTOROM*/
+/*
+%text-shared {   /*placeholder selektor *
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#text-1 {
+  @extend %text-shared;   /*extend je kao include samo sto se ne poziva nego se naslijedi*
+  color: green;
+}
+
+#text-2 {
+  @extend %text-shared;
+  color: red;
+}
+
+#text-3 {
+  @extend %text-shared;
+  color: blue;
+}
+
+*/
+
+
+
+/*
+/*primjer 5*/
+/*SELEKTOR 2 upucuje na roditeljski element *
+
+.box {
+  width: 600px;
+  height: 400px;
+  background-color: blue;
+
+  &:hover {
+    background-color: red;
+  }
+  }
+*/

@@ -1,0 +1,125 @@
+/*body {
+    font-family: sans-serif;
+}
+*/
+
+
+/*1 PRIMJER PROMJENJIVE KORISTE SE SA KARAKTEROM @NAZIV I VRIJEDNOS */
+
+@primary-dark-color: #333;    // Promjenjiva , a boja je vrijednost promjenjive
+
+body {
+    font-family: sans-serif;
+    color: @primary-dark-color;
+}
+
+// prioritet imaju promjenjive unutar bloka, a ukoliko ih nema onda se koristi globalna promjenjiva  kao u scss-u
+//znaci ako sam napravio h1 naslov i u njemu  definirao boju npr blue a color primary-dark-color onda ce biti blue a ne primary-dark-color
+
+//INTERPOLACIJAAAAAAAAA   se koristi sa karakterom @ i nazivom promjenjive
+
+@my-selector: box;   //definiramo less promjenjivu
+@w: width;
+.@{my-selector} {        //na ovaj nacin selektujemo iz html doc kada prevedemo sve znaci .box {  } tj. promjenjivu my-selector sa vrijednoscu box  i odradit ce zadani css kod(prevedeni)
+    //@w: 100px;          //promjenjiva w dobija vrijednost 100px  znaci da ovo radi, moramo izbrisati width i height ispod
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+
+//less promjenjive se mogu koristiti i unutar css svojstava
+
+//3 primjer interpolacije 
+
+@min1280: (min-width: 1280px);
+
+.box {
+    @media @min1280 {
+        width: 1024px;
+    }
+}
+
+
+//gnijezdenje u less-u identicno kao u sass-u
+
+article {
+    h1 {
+        color: red;
+    }
+    h2 {
+        color: blue;
+    }
+    p {
+        color: green;
+    }
+}
+
+
+.box {
+    width: 960px;
+    @media (min-width: 1280px) {
+        width: 800px;
+    }
+}
+
+
+//mixin u less-u se nesto razlikuje nego u sass-u, a to je da se u less-u ne koristi @include nego se koristi .naziv-mixin-a
+
+.foo {
+    color: blue;
+}
+
+#text-1 {
+    .foo();  //mixin foo se koristi u ovom slucaju
+    font-size: 20px;
+}
+
+#text-2 {
+    .foo();  //mixin foo se koristi u ovom slucaju
+    font-size: 30px;
+}
+
+//mixin se moze koristiti i sa parametrima
+// ako stavimo () pored .foo nece ga biti u css-u, a ako stavimo bez zagrada onda ce ga biti u css-u
+
+
+//MAPE U LESS-U
+
+
+#sizes() {
+    mobile: 320px;
+    tablet: 768px;
+    desktop: 1024px;
+
+}
+
+.box {
+    @media (min-width: #sizes[mobile]) {
+        width: 100%;
+    }
+}
+
+
+
+
+//OPERATORI U LESS-U nad numerickim vrijednostima i bojama
+
+@base_width: 600px / 960px;
+
+.box {
+    width: @base_width * 100%;
+}
+
+
+
+//importovanje less fajlova u css fajl
+@import "common";      //ako je .less fajl less ce ga prevesti u css i importovati ga i nikada ne kucamo .less nego samo naziv fajla
+@import "common.css";       //ako je .css fajl less ce ga ignorisati u kompajliranju css-a i nece ga prevesti u css nego ce ga samo importovati
+
+.box {
+
+    @media (min-width: #sizes[mobile]) {
+        width: 50%;
+    }
+}

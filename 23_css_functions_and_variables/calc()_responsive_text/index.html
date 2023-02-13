@@ -7,20 +7,22 @@
     <style>
 
         #main-container {
-            font-family: sans-serif;
-            max-width: 960px;
-            margin: 0 auto;
+            font-family: sans-serif;  
+            max-width: 960px;   /* 960px max sirina */
+            margin: 0 auto;   /* centriranje sadrzaja lijeva i desna margina na auto*/ 
 
-            font-size: calc(13px + (21 - 13) * ((100vw - 320px) / (1600 - 320)));
+            font-size: calc(13px + (21 - 13) * ((100vw - 320px) / (1600 - 320)));  /* (100vh je  vrijednost koja definise punu sirinu vidnog polja)13px je min font size, 21px je max font size, 
+            320px je min sirina vidnog polja, 1600px je max sirina vidnog polja */
         }
 
-        @media screen and (max-width: 319px) {
+        @media screen and (max-width: 319px) {  /* 319px je max sirina vidnog polja, a fon size ce biti blokiran na 13px i nece ga preci */
+            
           #main-container {
             font-size: 13px;
         }
     }
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1600px) {     /* 1600px je min sirina vidnog polja, a fon size ce biti blokiran na 21px i nece ga preci */
       #main-container {
         font-size: 21px;
     }
